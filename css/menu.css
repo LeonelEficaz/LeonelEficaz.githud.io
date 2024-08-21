@@ -1,0 +1,182 @@
+#menu-bar{
+	display: none;
+}
+
+header label{
+	float: right;
+	font-size: 28px;
+	margin: 6px 0;
+	cursor: pointer;
+}
+
+.menu{
+	position: absolute;
+	top: 50px;
+	left: 0;
+
+	width: 100%;
+	height: 100vh;
+	background: #2b6c16;
+
+	transition: all .5s;
+	transform: translateX(-100%);
+}
+
+.menu a{
+	display: block;
+	color: #fff;
+	height: 50px;
+	text-decoration: none;
+	padding: 15px;
+	border: 1px solid #fff;
+}
+
+
+.menu a:hover{
+	background: rgba(255,255,255,.3);
+}
+
+
+#menu-bar:checked ~.menu{
+	transform: translateX(0%);
+}
+
+/*-----------Responsive-----------*/
+
+/*Dispositivo Movil*/
+@media(min-width: 420px){
+	.menu{
+		background:rgba(51,51,51,.9);
+		width: 100%;
+		height: auto;
+	}
+
+}
+
+/*Tablets*/
+@media(min-width: 768px){
+	.menu{
+		background:rgba(51,51,51,.9);
+		width: 100%;
+		height: auto;
+	}
+}
+
+/*Escritorio*/
+@media(min-width: 1024px){
+	.menu{
+		position: static;
+		width: auto;
+		height: auto;
+		transform: translateX(0%);
+		float: right;
+		display: flex;
+		background:#133aff;
+	}
+
+	.menu a{
+		border: none;
+	}
+	
+	header label{
+		display: none;
+	}
+
+}
+
+/* Estilos de cuadrícula para servicios */
+main {
+    padding: 20px;
+}
+
+.featured {
+    margin-bottom: 20px;
+}
+
+.featured h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px; 
+}
+
+.game {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative; 
+    overflow: hidden; 
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.game:hover {
+    background-color: #eee;
+    transform: scale(1.05); 
+}
+
+.game:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 0, 0, 0.5), rgba(0, 255, 0, 0.5));
+    transition: opacity 0.3s;
+    opacity: 0.5;
+    z-index: -1; 
+}
+
+.game img {
+    max-width: 100%;  
+    height: auto;     
+    border-radius: 8px; 
+}
+
+.game h3 {
+    margin: 10px 0;
+}
+
+.game a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;S
+}
+
+/* noticias sobre nuevos servicios */
+.latest {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.latest h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+/* maraca de agua */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
